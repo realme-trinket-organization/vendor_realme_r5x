@@ -16,8 +16,10 @@
 
 PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/bin/dpmd:system/bin/dpmd \
+    vendor/realme/RMX1911/proprietary/bin/wfdservice:system/bin/wfdservice \
     vendor/realme/RMX1911/proprietary/etc/dpm/dpm.conf:system/etc/dpm/dpm.conf \
     vendor/realme/RMX1911/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
+    vendor/realme/RMX1911/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/realme/RMX1911/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:system/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
@@ -31,6 +33,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:system/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
     vendor/realme/RMX1911/proprietary/etc/sysconfig/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
+    vendor/realme/RMX1911/proprietary/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
+    vendor/realme/RMX1911/proprietary/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
     vendor/realme/RMX1911/proprietary/framework/vendor.qti.hardware.alarm-V1.0-java.jar:system/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.ant@1.0.so:system/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.dpm.api@1.0.so:system/lib/com.qualcomm.qti.dpm.api@1.0.so \
@@ -38,6 +42,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.imscmservice@2.0.so:system/lib/com.qualcomm.qti.imscmservice@2.0.so \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.imscmservice@2.1.so:system/lib/com.qualcomm.qti.imscmservice@2.1.so \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.uceservice@2.0.so:system/lib/com.qualcomm.qti.uceservice@2.0.so \
+    vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/com.quicinc.cne.api@1.0.so:system/lib/com.quicinc.cne.api@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/com.quicinc.cne.api@1.1.so:system/lib/com.quicinc.cne.api@1.1.so \
     vendor/realme/RMX1911/proprietary/lib/com.quicinc.cne.constants@1.0.so:system/lib/com.quicinc.cne.constants@1.0.so \
@@ -48,10 +53,13 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib/com.quicinc.cne.server@2.1.so:system/lib/com.quicinc.cne.server@2.1.so \
     vendor/realme/RMX1911/proprietary/lib/com.quicinc.cne.server@2.2.so:system/lib/com.quicinc.cne.server@2.2.so \
     vendor/realme/RMX1911/proprietary/lib/com.quicinc.cne.server@2.3.so:system/lib/com.quicinc.cne.server@2.3.so \
+    vendor/realme/RMX1911/proprietary/lib/extractors/libmmparser.so:system/lib/extractors/libmmparser.so \
     vendor/realme/RMX1911/proprietary/lib/lib-imsvideocodec.so:system/lib/lib-imsvideocodec.so \
     vendor/realme/RMX1911/proprietary/lib/lib-imsvt.so:system/lib/lib-imsvt.so \
     vendor/realme/RMX1911/proprietary/lib/lib-imsvtextutils.so:system/lib/lib-imsvtextutils.so \
     vendor/realme/RMX1911/proprietary/lib/lib-imsvtutils.so:system/lib/lib-imsvtutils.so \
+    vendor/realme/RMX1911/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
+    vendor/realme/RMX1911/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
     vendor/realme/RMX1911/proprietary/lib/libdiag_system.so:system/lib/libdiag_system.so \
     vendor/realme/RMX1911/proprietary/lib/libdpmctmgr.so:system/lib/libdpmctmgr.so \
     vendor/realme/RMX1911/proprietary/lib/libdpmfdmgr.so:system/lib/libdpmfdmgr.so \
@@ -59,8 +67,31 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib/libdpmtcm.so:system/lib/libdpmtcm.so \
     vendor/realme/RMX1911/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
     vendor/realme/RMX1911/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
+    vendor/realme/RMX1911/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
+    vendor/realme/RMX1911/proprietary/lib/libmmparser_lite.so:system/lib/libmmparser_lite.so \
+    vendor/realme/RMX1911/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+    vendor/realme/RMX1911/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
     vendor/realme/RMX1911/proprietary/lib/librcc.so:system/lib/librcc.so \
     vendor/realme/RMX1911/proprietary/lib/libsdm-disp-apis.so:system/lib/libsdm-disp-apis.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdaac.so:system/lib/libwfdaac.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdavenhancements.so:system/lib/libwfdavenhancements.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdclient.so:system/lib/libwfdclient.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdcodecv4l2.so:system/lib/libwfdcodecv4l2.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdcommonutils.so:system/lib/libwfdcommonutils.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdconfigutils.so:system/lib/libwfdconfigutils.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdmminterface.so:system/lib/libwfdmminterface.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdmmservice.so:system/lib/libwfdmmservice.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdmmsink.so:system/lib/libwfdmmsink.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdmmsrc.so:system/lib/libwfdmmsrc.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdnative.so:system/lib/libwfdnative.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdrtsp.so:system/lib/libwfdrtsp.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdservice.so:system/lib/libwfdservice.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfdsm.so:system/lib/libwfdsm.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfduibcinterface.so:system/lib/libwfduibcinterface.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfduibcsink.so:system/lib/libwfduibcsink.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfduibcsinkinterface.so:system/lib/libwfduibcsinkinterface.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
+    vendor/realme/RMX1911/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.data.factory@1.0.so:system/lib/vendor.qti.data.factory@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.data.factory@1.1.so:system/lib/vendor.qti.data.factory@1.1.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.hardware.alarm@1.0.so:system/lib/vendor.qti.hardware.alarm@1.0.so \
@@ -100,8 +131,11 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib64/libdpmtcm.so:system/lib64/libdpmtcm.so \
     vendor/realme/RMX1911/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/realme/RMX1911/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
+    vendor/realme/RMX1911/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
     vendor/realme/RMX1911/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/realme/RMX1911/proprietary/lib64/libsdm-disp-apis.so:system/lib64/libsdm-disp-apis.so \
+    vendor/realme/RMX1911/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
+    vendor/realme/RMX1911/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.1.so:system/lib64/vendor.display.color@1.1.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.2.so:system/lib64/vendor.display.color@1.2.so \
@@ -126,10 +160,12 @@ PRODUCT_PACKAGES += \
     imssettings \
     uceShimService \
     CNEService \
+    WfdService \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
     QtiTelephonyServicelibrary \
+    WfdCommon \
     cneapiclient \
     com.qti.dpmframework \
     com.qualcomm.qti.imscmservice-V2.0-java \
