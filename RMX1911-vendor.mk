@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:system/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
     vendor/realme/RMX1911/proprietary/etc/sysconfig/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
+    vendor/realme/RMX1911/proprietary/framework/vendor.qti.hardware.alarm-V1.0-java.jar:system/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.ant@1.0.so:system/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.dpm.api@1.0.so:system/lib/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.imscmservice@1.0.so:system/lib/com.qualcomm.qti.imscmservice@1.0.so \
@@ -61,6 +62,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib/librcc.so:system/lib/librcc.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.data.factory@1.0.so:system/lib/vendor.qti.data.factory@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.data.factory@1.1.so:system/lib/vendor.qti.data.factory@1.1.so \
+    vendor/realme/RMX1911/proprietary/lib/vendor.qti.hardware.alarm@1.0.so:system/lib/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.hardware.data.connection@1.0.so:system/lib/vendor.qti.hardware.data.connection@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.hardware.data.dynamicdds@1.0.so:system/lib/vendor.qti.hardware.data.dynamicdds@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.hardware.data.qmi@1.0.so:system/lib/vendor.qti.hardware.data.qmi@1.0.so \
@@ -103,6 +105,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.2.so:system/lib64/vendor.display.color@1.2.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.data.factory@1.0.so:system/lib64/vendor.qti.data.factory@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.data.factory@1.1.so:system/lib64/vendor.qti.data.factory@1.1.so \
+    vendor/realme/RMX1911/proprietary/lib64/vendor.qti.hardware.alarm@1.0.so:system/lib64/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.hardware.data.connection@1.0.so:system/lib64/vendor.qti.hardware.data.connection@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:system/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.hardware.data.qmi@1.0.so:system/lib64/vendor.qti.hardware.data.qmi@1.0.so \
