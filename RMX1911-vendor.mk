@@ -60,6 +60,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
     vendor/realme/RMX1911/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
     vendor/realme/RMX1911/proprietary/lib/librcc.so:system/lib/librcc.so \
+    vendor/realme/RMX1911/proprietary/lib/libsdm-disp-apis.so:system/lib/libsdm-disp-apis.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.data.factory@1.0.so:system/lib/vendor.qti.data.factory@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.data.factory@1.1.so:system/lib/vendor.qti.data.factory@1.1.so \
     vendor/realme/RMX1911/proprietary/lib/vendor.qti.hardware.alarm@1.0.so:system/lib/vendor.qti.hardware.alarm@1.0.so \
@@ -100,6 +101,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/realme/RMX1911/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
     vendor/realme/RMX1911/proprietary/lib64/librcc.so:system/lib64/librcc.so \
+    vendor/realme/RMX1911/proprietary/lib64/libsdm-disp-apis.so:system/lib64/libsdm-disp-apis.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.1.so:system/lib64/vendor.display.color@1.1.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.2.so:system/lib64/vendor.display.color@1.2.so \
