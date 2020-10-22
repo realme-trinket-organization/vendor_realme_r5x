@@ -22,12 +22,16 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/realme/RMX1911/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
+    vendor/realme/RMX1911/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
+    vendor/realme/RMX1911/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:system/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:system/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/com.qualcomm.qti.imscmservice.xml:system/etc/permissions/com.qualcomm.qti.imscmservice.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/embms.xml:system/etc/permissions/embms.xml \
+    vendor/realme/RMX1911/proprietary/etc/permissions/izat.xt.srv.xml:system/etc/permissions/izat.xt.srv.xml \
+    vendor/realme/RMX1911/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:system/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/realme/RMX1911/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
@@ -35,6 +39,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/etc/sysconfig/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
     vendor/realme/RMX1911/proprietary/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
     vendor/realme/RMX1911/proprietary/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
+    vendor/realme/RMX1911/proprietary/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
+    vendor/realme/RMX1911/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
     vendor/realme/RMX1911/proprietary/framework/vendor.qti.hardware.alarm-V1.0-java.jar:system/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.ant@1.0.so:system/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/realme/RMX1911/proprietary/lib/com.qualcomm.qti.dpm.api@1.0.so:system/lib/com.qualcomm.qti.dpm.api@1.0.so \
@@ -131,16 +137,23 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1911/proprietary/lib64/libdpmtcm.so:system/lib64/libdpmtcm.so \
     vendor/realme/RMX1911/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/realme/RMX1911/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
+    vendor/realme/RMX1911/proprietary/lib64/liblocationservice_jni.so:system/lib64/liblocationservice_jni.so \
     vendor/realme/RMX1911/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
     vendor/realme/RMX1911/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/realme/RMX1911/proprietary/lib64/libsdm-disp-apis.so:system/lib64/libsdm-disp-apis.so \
     vendor/realme/RMX1911/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
     vendor/realme/RMX1911/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
+    vendor/realme/RMX1911/proprietary/lib64/libxt_native.so:system/lib64/libxt_native.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.1.so:system/lib64/vendor.display.color@1.1.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.display.color@1.2.so:system/lib64/vendor.display.color@1.2.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.data.factory@1.0.so:system/lib64/vendor.qti.data.factory@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.data.factory@1.1.so:system/lib64/vendor.qti.data.factory@1.1.so \
+    vendor/realme/RMX1911/proprietary/lib64/vendor.qti.gnss@1.0.so:system/lib64/vendor.qti.gnss@1.0.so \
+    vendor/realme/RMX1911/proprietary/lib64/vendor.qti.gnss@1.1.so:system/lib64/vendor.qti.gnss@1.1.so \
+    vendor/realme/RMX1911/proprietary/lib64/vendor.qti.gnss@1.2.so:system/lib64/vendor.qti.gnss@1.2.so \
+    vendor/realme/RMX1911/proprietary/lib64/vendor.qti.gnss@2.0.so:system/lib64/vendor.qti.gnss@2.0.so \
+    vendor/realme/RMX1911/proprietary/lib64/vendor.qti.gnss@2.1.so:system/lib64/vendor.qti.gnss@2.1.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.hardware.alarm@1.0.so:system/lib64/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.hardware.data.connection@1.0.so:system/lib64/vendor.qti.hardware.data.connection@1.0.so \
     vendor/realme/RMX1911/proprietary/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:system/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
@@ -163,6 +176,7 @@ PRODUCT_PACKAGES += \
     uceShimService \
     CNEService \
     WfdService \
+    com.qualcomm.location \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
