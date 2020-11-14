@@ -30,6 +30,26 @@ android_app_import {
 }
 
 android_app_import {
+	name: "SoterService",
+	owner: "realme",
+	apk: "proprietary/app/SoterService/SoterService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "datastatusnotification",
+	owner: "realme",
+	apk: "proprietary/app/datastatusnotification/datastatusnotification.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
 	name: "embms",
 	owner: "realme",
 	apk: "proprietary/app/embms/embms.apk",
@@ -37,6 +57,37 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
+}
+
+android_app_import {
+	name: "imssettings",
+	owner: "realme",
+	apk: "proprietary/app/imssettings/imssettings.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "uceShimService",
+	owner: "realme",
+	apk: "proprietary/app/uceShimService/uceShimService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "HotwordEnrollmentOKGoogleWCD9340",
+	owner: "realme",
+	apk: "proprietary/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
 }
 
 android_app_import {
@@ -72,16 +123,10 @@ android_app_import {
 	privileged: true,
 }
 
-android_app_import {
-	name: "CarrierSettings",
+dex_import {
+	name: "QtiTelephonyServicelibrary",
 	owner: "realme",
-	apk: "proprietary/product/priv-app/CarrierSettings/CarrierSettings.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
+	jars: ["proprietary/framework/QtiTelephonyServicelibrary.jar"],
 }
 
 dex_import {
@@ -91,8 +136,86 @@ dex_import {
 }
 
 dex_import {
-	name: "vendor.qti.hardware.alarm-V1.0-java",
+	name: "com.qti.location.sdk",
 	owner: "realme",
-	jars: ["proprietary/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
+	jars: ["proprietary/framework/com.qti.location.sdk.jar"],
+}
+
+dex_import {
+	name: "com.qualcomm.qti.imscmservice-V2.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar"],
+}
+
+dex_import {
+	name: "com.qualcomm.qti.imscmservice-V2.1-java",
+	owner: "realme",
+	jars: ["proprietary/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar"],
+}
+
+dex_import {
+	name: "com.qualcomm.qti.uceservice-V2.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/com.qualcomm.qti.uceservice-V2.0-java.jar"],
+}
+
+dex_import {
+	name: "embmslibrary",
+	owner: "realme",
+	jars: ["proprietary/framework/embmslibrary.jar"],
+}
+
+dex_import {
+	name: "izat.xt.srv",
+	owner: "realme",
+	jars: ["proprietary/framework/izat.xt.srv.jar"],
+}
+
+dex_import {
+	name: "qcrilhook",
+	owner: "realme",
+	jars: ["proprietary/framework/qcrilhook.jar"],
+}
+
+dex_import {
+	name: "qti-telephony-common",
+	owner: "realme",
+	jars: ["proprietary/framework/qti-telephony-common.jar"],
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.latency-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/vendor.qti.hardware.data.latency-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.qti.hardware.factory-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/vendor.qti.hardware.factory-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.qti.hardware.soter-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/vendor.qti.hardware.soter-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.qti.ims.callinfo-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/vendor.qti.ims.callinfo-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.qti.latency-V2.0-java",
+	owner: "realme",
+	jars: ["proprietary/framework/vendor.qti.latency-V2.0-java.jar"],
 }
 

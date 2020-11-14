@@ -126,12 +126,16 @@
             <Mode>CEA</Mode>
         </AuxStreamInfo>
 
+
+        <!-- ifdef ODM_WT_EDIT  -->
+        <!-- minchao.Zhu@ODM_WT.cn.wifi.basic,20190621, close wifi StandbyResumeCapability fuction. -->
         <!--
             Standby Resume capability is supported
         -->
         <StandbyResumeCapability>
-            <Valid>1</Valid>
+            <Valid>0</Valid>
         </StandbyResumeCapability>
+        <!-- endif ODM_WT_EDIT  -->
 
         <!--
             Explicit AV format change
@@ -698,7 +702,16 @@
         To disable/enable audio stream playback
         support during power suspend - 0 or 1
     -->
+
+    <!-- #ifndef VENDOR_EDIT -->
+    <!-- Liang.Xu@PSW.MM.AudioServer.Base.1297775, 2018/11/28, -->
+    <!-- Modify for audio should still playing on TV after screen off -->
+    <!--
     <AudioStreamInSuspend>0</AudioStreamInSuspend>
+    -->
+    <!-- #else  //VENDOR_EDIT -->
+    <AudioStreamInSuspend>1</AudioStreamInSuspend>
+    <!-- #endif //VENDOR_EDIT -->
 
     <!--
         Compensation delay for audio
