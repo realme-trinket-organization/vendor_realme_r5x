@@ -124,9 +124,21 @@ android_app_import {
 }
 
 dex_import {
+	name: "QPerformance",
+	owner: "realme",
+	jars: ["proprietary/framework/QPerformance.jar"],
+}
+
+dex_import {
 	name: "QtiTelephonyServicelibrary",
 	owner: "realme",
 	jars: ["proprietary/framework/QtiTelephonyServicelibrary.jar"],
+}
+
+dex_import {
+	name: "UxPerformance",
+	owner: "realme",
+	jars: ["proprietary/framework/UxPerformance.jar"],
 }
 
 dex_import {
