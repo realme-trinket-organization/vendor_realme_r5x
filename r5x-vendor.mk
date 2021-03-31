@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/realme/r5x
 
 PRODUCT_COPY_FILES += \
+    vendor/realme/r5x/proprietary/bin/charger:$(TARGET_COPY_OUT_SYSTEM)/bin/charger \
     vendor/realme/r5x/proprietary/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM)/bin/perfservice \
     vendor/realme/r5x/proprietary/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM)/bin/wfdservice \
     vendor/realme/r5x/proprietary/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/perfservice.rc \
